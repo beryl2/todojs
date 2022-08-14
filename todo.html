@@ -4,45 +4,27 @@
     </head>
     <body>
         <div>BERIL</div>
-        <button>Press me</button>
+        <input id="todo-title" type="text"/>
+        <button onclick = "addTodo()">ADD Todo</button>
         
         <script>
             let todo1 = "buy cockies";
             let todo2 = "wash car";
             let todo3 = "Make dinner";
-            let month = "august";
-            let date = "4th";
-            let year = 2022
-            function addtodo(todoTitle){
+            let todos = ["buy cockies","wash car","Make dinner"];
+            todos.push('another todos')
+            
+            todos.forEach(function (todoTitle){
                 let element = document.createElement('div');
                 element.innerText = todoTitle;
-                document.body.appendChild(element);
-            }
-            addtodo("new todo");
-            addtodo(todo3);
-
-            function greeting(firstName) {
-                console.log('hello ' + firstName);
-            }
-            greeting('Simon');
-
-            function toUpper(str) {
-                console.log(str.toUpperCase());
-            }
-            toUpper('Simon');
-
+                document.body.appendChild(element)
+            });
             
-            
-            
-
-
-            element = document.createElement('div');
-            element.innerText = todo2;
-            document.body.appendChild(element);
-
-            element = document.createElement('button');
-            element.innerText = "click me";
-            document.body.appendChild(element);
+            function addTodo() {
+                let textbox = document.getElementById('todo-title');
+                let title = textbox.value;
+                todos.push(title);
+            }
         </script>
     </body>
 </html>
