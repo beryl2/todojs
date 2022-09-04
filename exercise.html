@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>beryl Todo App</title>
+    </head>
+    <body>
+        <input type="text" id="tododiv"/>
+        <button onclick ="displaytitle()">Display title</button>
+        <div id="counter">0</div>
+        <div id="cart"></div>
+        
+        <button id="todobutton" onclick="countup()">Up</button>
+        <button id="counter" onclick="changeToDone()">AddTodo</button>
+        <button id="counter" onclick="countdown()">AddTodo</button>
+        <script>
+            let
+            let count = 0;
+
+            function changeToDone(){
+                let button = document.getElementById('todobutton');
+                button.innerText = 'Done'
+            }
+
+            function countUp(){
+                count = count + 1;
+                let conter = document.getElementById('counter');
+                counter.innerHTML = 'count'
+            }
+            function cowndown(){
+                count =  count -1;
+                updateCount();
+
+            }
+
+            function displaytitle(){
+                let textbox = document.getElementById('tododiv');
+                let title = textbox.value;
+
+                let div = document.createElement('div');
+                div.innerText = title;
+                document.body.appendChild(div);
+            }
+         
+        </script>
+    </body>
+</html>
